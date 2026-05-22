@@ -76,9 +76,9 @@ class SiteController extends Controller
      *
      * @return string
      */
-    public function actionIndex(): string
+    public function actionIndex()
     {
-        return $this->render('index');
+        return $this->redirect(['/student/index']);
     }
 
     /**
