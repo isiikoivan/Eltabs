@@ -1,8 +1,6 @@
 <?php
 
-namespace app\components;
-
-use Yii;
+namespace app\controllers;
 
 class EltabsMenuRegistry
 {
