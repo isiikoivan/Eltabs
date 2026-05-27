@@ -8,7 +8,6 @@ declare(strict_types=1);
 use app\widgets\Alert;
 use yii\bootstrap5\Breadcrumbs;
 use yii\helpers\Html;
-
 // Inject standard global HTML header metadata tags, links, and registered asset bundles safely
 $this->render('_head');
 
@@ -20,7 +19,6 @@ $currentControllerId = Yii::$app->controller->id;
 // Query the centralized registry hub using our controller ID as an index lookup key.
 // If matching tab items exist, it returns a configuration array matrix; otherwise, an empty array fallback.
 $dynamicTabs = \app\components\EltabsMenuRegistry::getTabs($currentControllerId);
-
 ?>
 <?php $this->beginPage() ?>
     <!DOCTYPE html>
@@ -51,7 +49,12 @@ $dynamicTabs = \app\components\EltabsMenuRegistry::getTabs($currentControllerId)
                 <?php if (!empty($dynamicTabs)): ?>
                     <div class="dynamic-tabs-navigation-frame">
 
-                        <?= \app\components\EltabsMenuWidget::widget([
+<!--                        --><?php //= \app\components\EltabsMenuWidget::widget([
+//                            'controllerId' => $currentControllerId,
+//                            'items'        => $dynamicTabs
+//                        ]) ?>
+
+                        <?= \Isiikoivan\Yii2EltabMenu\EltabMenuWidget::widget([
                             'controllerId' => $currentControllerId,
                             'items'        => $dynamicTabs
                         ]) ?>
