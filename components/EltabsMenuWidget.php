@@ -170,7 +170,7 @@ class EltabsMenuWidget extends Widget
         // 4. PRESENTATION STYLING & COMPILATION OUTPUT
         // Inject layout client styles to ensure visual isolation, then compile and stream the finalized template.
         $this->registerClientAssets();
-        return $this->render('eltabs_menu', ['items' => $this->items]);
+        return $this->render('eltab-menu', ['items' => $this->items]);
     }
 
     /**
