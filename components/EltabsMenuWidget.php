@@ -6,12 +6,12 @@ use Yii;
 use yii\base\Widget;
 
 /**
- * EltabsMenuEngine handles advanced contextual tab navigation layout tracking.
+ * EltabsMenuWidget handles advanced contextual tab navigation layout tracking.
  * * It automatically maps active menu highlights across complex CRUD workflows,
  * handles custom controller configurations, parses camelCase vs kebab-case URLs,
  * and gracefully enforces RBAC visibility permissions on a per-tab basis.
  */
-class EltabsMenuEngine extends Widget
+class EltabsMenuWidget extends Widget
 {
     /** * @var array The tab menu items configuration matrix passed from layout or registry.
      */

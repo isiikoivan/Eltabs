@@ -12,7 +12,7 @@ use Yii;
  */
 class CountryController extends Controller
 {
-    public $layout = '@app/views/layouts/location_layout';
+//    public $layout = '@app/views/layouts/location_layout';
 
     public function behaviors()
     {
